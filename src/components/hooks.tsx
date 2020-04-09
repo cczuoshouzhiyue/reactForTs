@@ -3,9 +3,9 @@ import React, {useState, useEffect} from 'react'
 const LikeButton: React.FC = () => {
     const [like, setLike] = useState(1);
     const [isClose, setClose] = useState(true);
-    const [str, setStr] = useState('解绑');
+    const [str, setStr] = useState('这是一个自定义的组件');
     useEffect(()=>{
-        document.title = 'test' + like
+        document.title = 'test' + like;
         return ()=> {
             setStr(str + like)
         }

@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import { Provider } from "mobx-react"
 import AppStore from "./store";
+import 'normalize.css'
 import * as serviceWorker from './serviceWorker';
 
 

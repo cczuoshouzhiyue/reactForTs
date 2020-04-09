@@ -1,4 +1,4 @@
-import { observable, action } from 'mobx'
+import { observable } from 'mobx';
 
 interface Interface {
     currentMenu: 'index'
@@ -10,4 +10,4 @@ const menuStore = observable({
         this.currentMenu = name
     }
 });
-export default menuStore
+export default menuStore;

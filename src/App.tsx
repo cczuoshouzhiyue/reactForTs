@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react'
 import LikeButton from './components/hooks'
-import './App.css';
+import './App.scss';
 
 @inject('menuStore')
 @observer

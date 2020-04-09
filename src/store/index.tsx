@@ -1,4 +1,4 @@
-import menuStore from './test'
+import menuStore from './test';
 const AppStore = {
     menuStore
 };
