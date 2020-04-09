@@ -1,6 +1,7 @@
 module.exports = {
     "env": {
         "browser": true,
+        "node": true
     },
     "parser": "babel-eslint",
     "extends": "eslint:recommended",
@@ -20,11 +21,15 @@ module.exports = {
         "document": true,
         "localStorage": true,
         "window": true,
-        "require": true
+        "require": true,
     },
     "rules": {
+        // 双峰驼命名格式
+        "camelcase": 2,
+        // switch语句强制default分支，也可添加 // no default 注释取消此次警告
+        "default-case": 2,
         "no-console":0,
-        "indent": ["error", 2],
+        "indent": ["off", 2],
         "no-debugger": 1,
         "linebreak-style": [
             0,
@@ -36,7 +41,7 @@ module.exports = {
             "single"
         ],
         "semi": [
-            "error",
+            "off",
             "always"
         ],
         "no-unused-vars": [
