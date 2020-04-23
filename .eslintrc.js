@@ -22,6 +22,8 @@ module.exports = {
         "localStorage": true,
         "window": true,
         "require": true,
+        "BMap": true,
+        "BMapGL": true
     },
     "rules": {
         // 双峰驼命名格式

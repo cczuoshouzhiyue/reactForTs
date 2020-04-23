@@ -1,0 +1,27 @@
+.home{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  aside{
+    flex: 0 0 200px;
+    padding-top: 15px;
+    border-right: 1px solid #EBEBEB;
+    span{
+      display: inline-block;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+      color: #1a1a1a;
+    }
+    .active{
+      color: aquamarine;
+    }
+  }
+  main{
+    flex: 1;
+    #container {
+         height:100%
+     }
+  }
+}

@@ -1,7 +1,15 @@
 import React from 'react';
-import { observer, inject } from 'mobx-react'
-import LikeButton from './components/hooks'
+import { observer, inject } from 'mobx-react';
+import LikeButton from './components/hooks';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Switch} from 'react-router';
+import routes from './router';
+import RouterInterface from './interface/router';
+import { RouteWithSubRoutes } from './util/router'
+import HeaderComponent from './components/header/index';
+
 import './App.scss';
+
 
 @inject('menuStore')
 @observer
@@ -10,39 +18,22 @@ class App extends React.Component<any, any>{
   render(): React.ReactElement<any> {
     const {menuStore: {currentMenu}} = this.props
     return (
-       <div className="App">
-            <header className="App-header">
-                Learn React
-                <p>这是渲染的mobx: {currentMenu}</p>
-                <p><LikeButton/></p>
+        <BrowserRouter>
+           <div className="App">
+               <HeaderComponent/>
+               <section>
+                   <Switch>
+                       {routes.map((route: RouterInterface, i: number) => {
+                           return RouteWithSubRoutes(route, i)
+                       })}
+                   </Switch>
+               </section>
 
-            </header>
-    </div>
+           </div>
+        </BrowserRouter>
     )
   }
 }
-
-// function App() {
-//   const { musicPlayStore } = this.props;
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//         <LikeButton />
-//       </header>
-//     </div>
-//   );
-// }
-//
-// export default App;
-//
 
 
 export default App

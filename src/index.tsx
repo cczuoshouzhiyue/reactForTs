@@ -5,6 +5,7 @@ import App from './App';
 import { Provider } from 'mobx-react'
 import AppStore from './store';
 import 'normalize.css'
+import './router';
 import * as serviceWorker from './serviceWorker';
 
 
